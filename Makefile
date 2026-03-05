@@ -20,3 +20,9 @@ $(TARGET): $(SRCS)
 
 clean:
 	rm -f $(TARGET)
+
+test: all
+	echo "Hello World" > /tmp/test_in.txt
+	./securecopy /tmp/test_in.txt /tmp/test_enc.txt K
+	./securecopy /tmp/test_enc.txt /tmp/test_dec.txt K
+	diff /tmp/test_in.txt /tmp/test_dec.txt && echo "TEST PASSED" || echo "TEST FAILED"
