@@ -1,7 +1,6 @@
 CXX      = g++
 CXXFLAGS = -Wall -Wextra -std=c++17 -pthread -I./deps
 
-# rpath: чтобы бинарник находил .so рядом без LD_LIBRARY_PATH
 UNAME := $(shell uname)
 ifeq ($(UNAME), Darwin)
     RPATH = -Wl,-rpath,@loader_path/deps
