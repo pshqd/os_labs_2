@@ -1,4 +1,5 @@
-# Lab 2: securecopy
+# Простой файловый копировщик с
+шифрованием
 
 Многопоточный файловый копировщик с XOR-шифрованием.
 Использует схему producer/consumer (POSIX threads), bounded buffer и libcaesar.so из Lab 1.
